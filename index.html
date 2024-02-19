@@ -3,36 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="./images//easyFermiIcon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="style.css"> 
     <link rel="stylesheet" type="text/css" href="./styles/social-icons.css"> 
     <title>easyfermi</title>
 </head>
 <body>
+    <img id="dynamic-background" src="./images/fermiMap.png">
     <header>
-        <div id="logo" title="easyfermi-logo">easyFermi</div>
+        <div id="title-container">
+            <img id="logo" src="./images/easyFermiIcon.png">
+            <div id="title" title="easyfermi-logo">eas<div style="color: rgb(254, 104, 49);">y</div>Ferm<div style="color: rgb(74, 74, 255);">i</div></div>
+        </div>
+
         <div id="social-media-links">
-            <a href="https://www.instagram.com/viannaclodomir/" class="fa-icon fa-icon-2x">
-                <i class="fa fa-instagram social-media-mod"></i>
-            </a>
-            <a class="fa-icon fa-icon-2x" href="https://twitter.com/ClodomirVSN" title="">
-                <i class="fa fa-twitter social-media-mod"></i>
-            </a>
-            
-            <a class="fa-icon fa-icon-2x " href="https://www.linkedin.com/in/clodomirvianna/" title="">
-                <i class="fa fa-linkedin social-media-mod"></i>
-            </a>
-            <a class="fa-icon fa-icon-2x " href="https://github.com/clodoN1109" title="">
+            <a class="fa-icon fa-icon-2x " href="https://github.com/ranieremenezes/easyfermi" title="">
                 <i class="fa fa-github social-media-mod"></i>
             </a>
+            <a class="fa-icon fa-icon-2x " href="https://www.youtube.com/@easyfermi4427" title="">
+                <i class="fa fa-youtube social-media-mod"></i>
+            </a>
+            <a class="fa-icon fa-icon-2x " href="https://python.org" title="">
+                <i>
+                    <img  src="./images/python.png" width="100%" height="100%">
+                </i>
+            </a>
+            <a class="fa-icon fa-icon-2x " href="https://fermi.gsfc.nasa.gov/ssc/data/analysis/user/" title="">
+                <i>
+                    <img  src="./images/nasa.png" width="110%">
+                </i>
+            </a>
+            
         </div>
     </header>
     <div id="presentation">
 
         <div class="container" id="presentation-text">
-            <p>The easiest way to analyse Fermi-LAT data.</p>
-            <h5 style="padding: 0 40px 0 60px;">A solution to facilitate Fermi-LAT data analysis by providing an 
+            <p>The easiest way to analyze Fermi-LAT data.</p>
+            <h5 style="padding: 0 40px 0 60px; margin: 0; font-style: normal; font-weight: 300;">&ensp; &ensp; A solution to facilitate Fermi-LAT data analysis by providing an 
                 intuitive graphical interface to interact with the Fermi science tools.
             </h5>
         </div>  
@@ -42,10 +51,10 @@
     </div>
 
     <div id="menu">
-        <button class="menu-button" id="about-button">About</button>
-        <button class="menu-button" id="documentation-button">Docs</button>
-        <button class="menu-button" id="downloads-button">Downloads</button>
-        <button class="menu-button" id="community-button">Community</button>
+        <div class="menu-button-container"><a href="https://easyfermi.readthedocs.io/en/latest/"><button class="menu-button" id="about-button"><div class="button-title">About</div></button></a><h4 class="menu-button-info">Learn about our motivations and goals.</h4></div>
+        <div class="menu-button-container"><a href="https://easyfermi.readthedocs.io/en/latest/"><button class="menu-button" id="docs-button"><div class="button-title">Documentation</div></button></a><h4 class="menu-button-info">Learn about installation and how to use it.</h4></div>
+        <div class="menu-button-container"><a href="https://github.com/ranieremenezes/easyfermi"><button class="menu-button" id="downloads-button"><div class="button-title">Downloads</div></button></a><h4 class="menu-button-info">Download the latest stable version for your system.</h4></div>
+        <div class="menu-button-container"><a href="https://github.com/ranieremenezes/easyfermi"><button class="menu-button" id="community-button"><div class="button-title">Community</div></button></a><h4 class="menu-button-info">Contribute to the open-source repository.</h4></div>
     </div>
     
     <footer>

@@ -7,6 +7,7 @@
     align-items: center;
 
     margin-right: 5vw;
+    gap: 2vw;
     
 }
 .social-round-icon {
@@ -75,4 +76,8 @@
     background-color: #ff0060;
     color: #fff;
     border-color: #ff0060;
+}
+
+.social-media-mod{
+    font-size: 3vw;
 }
