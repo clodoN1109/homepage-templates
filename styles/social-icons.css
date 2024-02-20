@@ -81,3 +81,7 @@
 .social-media-mod{
     font-size: 3vw;
 }
+
+.social-media-mod:hover{
+    scale: 1.1;
+}
