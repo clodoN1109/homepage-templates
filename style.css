@@ -2,12 +2,16 @@ body {
 
     width: 100vw;
     max-width: 100vw;
-    height: 100vh;
-    max-height: 100vh;
+    /* height: 100vh; */
+    /* max-height: 100vh; */
     padding: 0;
     margin: 0;
 
-    overflow-y: hidden;
+    background-color: rgba(42, 38, 38, 0.813);
+    /* background-image: url(./images/fermiMap.png);
+    background-size: cover; */
+
+    /* overflow-y: hidden; */
     overflow-x: hidden;
 }
 
@@ -17,8 +21,6 @@ body {
    height: 100%;
    z-index: -1;
    transition: all 200s;
-
-
 }
 
 header{
@@ -185,8 +187,10 @@ header{
 } */
 
 #menu {
-    width: 100%;
+    width: 100vw;
+    max-width: 100vw;
     height: fit-content;
+    padding-left: 10vw;
 
     /* background-color: rgba(41, 56, 65, 0.614); */
     box-shadow: 0.3vw 0.3vw 1vw 0.2vw rgba(255, 77, 148, 0.525);
@@ -197,9 +201,12 @@ header{
     flex-wrap: nowrap;
     align-items: center;
     align-content: center;
-    justify-content: center;
-    gap: 5vw;
+    justify-content: flex-start;
     justify-items: center;
+    gap: 5vw;
+    
+    border-top: 2px solid rgba(255, 222, 222, 0.454);
+
     color: azure;
 }
 
@@ -212,7 +219,7 @@ header{
     justify-content: center;
     justify-items: left;
 
-    padding: 0px 0 0px 0;
+    padding: 5px 0 0px 0;
 }
 
 .menu-button{
@@ -229,7 +236,7 @@ header{
     border-width: 2px;
     border-color: rgba(245, 245, 245, 0.429);
 
-    opacity: 0.7;
+    opacity: 0.95;
 
     cursor: pointer;
 
@@ -241,19 +248,24 @@ header{
 
 .menu-button:hover{
     scale: 1.03;
-    opacity: 0.95;
+    opacity: 1;
 }
 
 .button-title{
-    padding: 5px 0 5px 0;
-    margin: 60px 0 0 0;
+    padding: 3px 0 3    px 0;
+    margin: 62px 0 0 0;
 
-    backdrop-filter: blur(40px);
-    background-color: rgba(255, 255, 255, 0.429);
+    backdrop-filter: blur(20px);
+    background-color: rgba(255, 255, 255, 0.696);
+    box-shadow: 0.3vw 0.3vw 1vw 0.2vw rgba(235, 172, 155, 0.329);
     
     font-style: normal;
     font-weight: 400;
     color: rgb(0, 0, 0);
+
+    border-style: solid;
+    border-width: 1px 0 1px 0;
+    border-color: rgba(49, 46, 46, 0.349);
 
     opacity: 1;
 }
@@ -284,7 +296,7 @@ header{
 }
 
 #downloads-button {
-    background-image: url(./images/downloads.jpg);
+    background-image: url(./images/downloads.png);
     background-size: cover;
 }
 
@@ -300,10 +312,9 @@ header{
     margin: 3vh 0 0 0;
     padding: 0.5vw 0vw 0.5vw 0;
 
-    /* background-color: rgba(41, 56, 65, 0.614); */
-
     backdrop-filter: blur(5px);
     background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.991), transparent);
+    box-shadow: 0.3vw 0.3vw 1vw 0.2vw rgba(235, 172, 155, 0.329);   
 
     display: flex;
     flex-direction: row;
@@ -327,7 +338,7 @@ header{
 }
 
 #dev3-button {
-    margin-right: 1vw;
+    margin-right: 5vw;
     background-image: url(./images/dev3.png);
     background-size: contain;
 }
@@ -388,7 +399,7 @@ header{
 }
 
 #buymeacoffee-button{
-    margin-right: 20vw;
+    margin-right: 10vw;
     opacity: 0.8;
 }
 
@@ -396,3 +407,53 @@ header{
     scale: 1.01;
     opacity: 1;
 }
+
+#community-display-container{
+    width: 100%;
+    height: fit-content;
+
+    padding: 2vw 0 5vh 0;
+
+    background-image: url(./images/fermiMap.png);
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+.community-section-title{
+    font-family: monospace;
+    opacity: 0.4; 
+    color: white; 
+    font-size: 5vw;
+
+    align-self: flex-start;
+    margin: 0 0 0 5vw;
+
+    backdrop-filter: blur(5px);
+}
+
+#the-community-display {
+    width: 80%;
+    height:fit-content;
+
+
+    backdrop-filter: blur(50px);
+
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    color: azure;
+
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 2px;
+    border-color: rgba(245, 245, 245, 0.249);
+}
+
