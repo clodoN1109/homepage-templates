@@ -21,13 +21,28 @@ setTimeout(() => {
 
 }, 500);
 
-function changeOSinstructions(instructionId){
+function changeOSinstructions(instructionId, buttonid){
 
     document.getElementById("os-selection-message").style.display="none";
     document.getElementById("linux-instructions").style.display="none";
     document.getElementById("windows-instructions").style.display="none";
     document.getElementById("mac-instructions").style.display="none";
     document.getElementById(instructionId).style.display="block";
+
+    document.getElementById('linux-button').style.borderWidth = "2px"
+    document.getElementById('windows-button').style.borderWidth = "2px"
+    document.getElementById('mac-button').style.borderWidth = "2px"
+    document.getElementById(buttonid).style.borderWidth = "3.5px"
+
+    document.getElementById('linux-button').style.borderColor = "rgba(255,255,255,0.33)"
+    document.getElementById('windows-button').style.borderColor = "rgba(255,255,255,0.33)"
+    document.getElementById('mac-button').style.borderColor = "rgba(255,255,255,0.33)"
+    document.getElementById(buttonid).style.borderColor = "rgba(255,255,255,0.77)"
+
+    document.getElementById('linux-button').style.opacity = "0.5"
+    document.getElementById('windows-button').style.opacity = "0.5"
+    document.getElementById('mac-button').style.opacity = "0.3"
+    document.getElementById(buttonid).style.opacity = "1"
 
 }
 

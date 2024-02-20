@@ -11,7 +11,7 @@
     <title>easyfermi</title>
 </head>
 <body>
-    <img id="dynamic-background" src="./images/fermiMap.png">
+    <img id="dynamic-background" src="./images/background1.png">
     <header>
         <div id="title-container">
             <img id="telescope" src="./images/easyFermiIcon.png">
@@ -20,18 +20,18 @@
         </div>
         
         <div id="social-media-links">
-            <a class="fa-icon fa-icon-2x " href="https://github.com/ranieremenezes/easyfermi" title="">
+            <a class="fa-icon fa-icon-2x " href="https://github.com/ranieremenezes/easyfermi" target="_blank" title="">
                 <i class="fa fa-github social-media-mod"></i>
             </a>
-            <a class="fa-icon fa-icon-2x " href="https://www.youtube.com/@easyfermi4427" title="">
+            <a class="fa-icon fa-icon-2x " href="https://www.youtube.com/@easyfermi4427" target="_blank" title="">
                 <i class="fa fa-youtube social-media-mod"></i>
             </a>
-            <a class="fa-icon fa-icon-2x " href="https://pypi.org/project/easyfermi/" title="">
+            <a class="fa-icon fa-icon-2x " href="https://pypi.org/project/easyfermi/" target="_blank" title="">
                 <i>
                     <img class="social-media-mod" src="./images/pypi.png" width="100%" height="100%">
                 </i>
             </a>
-            <a class="fa-icon fa-icon-2x " href="https://fermi.gsfc.nasa.gov/ssc/data/analysis/user/" title="">
+            <a class="fa-icon fa-icon-2x " href="https://fermi.gsfc.nasa.gov/ssc/data/analysis/user/" target="_blank" title="">
                 <i>
                     <img class="social-media-mod"  src="./images/nasa.png" width="110%">
                 </i>
@@ -49,15 +49,13 @@
         </div>  
         <div class="container">
             <div class="media-container">
-                <div id="system-menu">
-                    <div onclick="{changeOSinstructions('linux-instructions')}" class="system-option"><button class="fa fa-linux os-symbol"></button>Linux</div>
-                    <div onclick="{changeOSinstructions('windows-instructions')}" class="system-option"><button class="fa fa-windows os-symbol"></button>Windows (WSL)</div>
-                    <div onclick="{changeOSinstructions('mac-instructions')}" class="system-option"><button class="fa fa-apple os-symbol"></button>MacOS</div>
-                </div>
+
                 <div id="instructions-container">
                     <div class="scrollable-container">
                         <div id="os-selection-message" style="display:block;">
-                            Select the OS system to see the installation<br>steps. 
+                            >>> Select the OS system of your preference to see <br> the installation instructions.
+                            <br>
+                            >>> |
                         </div>
                         
                         
@@ -65,8 +63,8 @@
                             - Requirements:
                             <br><br>
                             <a href="https://github.com/conda-forge/miniforge" target="_blank">Miniforge(recommended)</a>
+                            or <a href="https://docs.anaconda.com/free/miniconda/" target="_blank">Miniconda3</a>
                             or <a href="https://www.anaconda.com/download/" target="_blank">Anaconda3</a> 
-                            or <a href="https://docs.anaconda.com/free/miniconda/" target="_blank">Miniconda3</a> 
                             <br><br>
                             
                             - Installation:<br><br>
@@ -102,20 +100,72 @@
                             <br>Easyfermi GUI might open in a few seconds.
                             <br><br>Reach out through GitHub for any questions.
                             <br><br>
-  
-                            
                         </div>
                         
                         
                         <div id="windows-instructions" style="display: none;">
-                            In the terminal, run: (Windows)
+                            - Requirements:
+                            <br><br>
+                            <a href="https://learn.microsoft.com/pt-br/windows/wsl/install" target="_blank">WSL (Windows Subsystem for Linux)</a>
+                            
+
+                            <br><br>
+                            <a href="https://github.com/conda-forge/miniforge" target="_blank">Miniforge(recommended)</a>
+                            or <a href="https://www.anaconda.com/download/" target="_blank">Anaconda3</a> 
+                            or <a href="https://docs.anaconda.com/free/miniconda/" target="_blank">Miniconda3</a> 
+                            <br><br>
+                            
+                            - Installation:<br><br>
+                            
+                            &ensp;&ensp; In the terminal, within the WSL's<br>linux environment, run:<br>
+                            
+                            <div class="code-box">
+                                <pre><code>sudo apt-get install libgl1</code></pre>
+                                <button class="copy-button" onclick="copyToClipboard()">Copy</button>
+                            </div>
+
+                            Miniforge/Miniconda3/Anaconda3/ must have being <br> installed using WSL.
+                            <div class="code-box">
+                                <pre><code>mamba create --name easyfermi -c conda-forge -c fermi python=3.9 "fermitools>=2.2.0" "healpy=1.16.1" "gammapy=1.1" "scipy=1.10.1" "astropy=5.3.3" "pyqt=5.15.9" "astroquery=0.4.6" "psutil=5.9.8" "emcee=3.1.4" "corner=2.2.2"</code></pre>
+                                <button class="copy-button" onclick="copyToClipboard()">Copy</button>
+                            </div>
+                            <div class="code-box">
+                                <pre><code>mamba activate easyfermi</code></pre>
+                                <button class="copy-button" onclick="copyToClipboard()">Copy</button>
+                            </div>
+                            <div class="code-box">
+                                <pre><code></code>pip install fermipy easyfermi</pre>
+                                <button class="copy-button" onclick="copyToClipboard()">Copy</button>
+                            </div>
+                            
+                            - Running:<br><br>
+                            
+                            &ensp;&ensp; In the terminal, run:<br>
+                            
+                            <div class="code-box">
+                                <pre><code></code>mamba activate easyfermi</pre>
+                                <button class="copy-button" onclick="copyToClipboard()">Copy</button>
+                            </div>
+                            <div class="code-box">
+                                <pre><code></code>python -c "import easyfermi"</pre>
+                                <button class="copy-button" onclick="copyToClipboard()">Copy</button>
+                            </div>
+                            
+                            <br>Easyfermi GUI might open in a few seconds.
+                            <br><br>Reach out through GitHub for any questions.
+                            <br><br>
                         </div>
                         
                         
                         <div id="mac-instructions" style="display: none;">
-                            In the terminal, run: (MacOS)
+                            Redirected to Linux instructions.
                         </div>
                     </div>
+                </div>
+                <div id="system-menu">
+                    <div onclick="{changeOSinstructions('linux-instructions', 'linux-button')}" class="system-option" id="linux-button"><img src="./images/linux-logo.png" title="linux" class="os-symbol"></img></div>
+                    <div onclick="{changeOSinstructions('windows-instructions', 'windows-button')}" class="system-option" id="windows-button"><img src="./images/windows-logo.png" title="windows" class="os-symbol"></img></div>
+                    <div onclick="{changeOSinstructions('linux-instructions', 'mac-button')}" class="system-option" id="mac-button"><img src="./images/apple-logo.png" title="macOS" class="os-symbol"></img></div>
                 </div>
                 <!-- <iframe id="youtube-embedded-video" width="560" height="315" src="https://www.youtube.com/embed/OPMOsheCId8?si=Ep9Qo8SFfJ5Zf2TY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
             </div>
@@ -123,18 +173,17 @@
     </div>
     
     <div id="menu">
-        <!-- <div class="menu-button-container"><a href="https://easyfermi.readthedocs.io/en/latest/"><button class="menu-button" id="about-button"><div class="button-title">the project</div></button></a><h4 class="menu-button-info">Learn about our motivations and goals.</h4></div> -->
-        <div class="menu-button-container"><a href="https://easyfermi.readthedocs.io/en/latest/"><button class="menu-button" id="docs-button"><div class="button-title">documentation</div></button></a><h4 class="menu-button-info">Learn how to install and configure it to work. </h4></div>
-        <div class="menu-button-container"><a href="https://pypi.org/project/easyfermi/"><button class="menu-button" id="downloads-button"><div class="button-title">downloads</div></button></a><h4 class="menu-button-info">Download current or past versions.</h4></div>
-        <div class="menu-button-container"><a href="https://github.com/ranieremenezes/easyfermi"><button class="menu-button" id="community-button"><div class="button-title">open-source</div></button></a><h4 class="menu-button-info">Contribute to the open-source repository.</h4></div>
+        <div class="menu-button-container"><a href="https://easyfermi.readthedocs.io/en/latest/" target="_blank"><button class="menu-button" id="docs-button"><div class="button-title">documentation</div></button></a><h4 class="menu-button-info">Learn how to install and configure it to work. </h4></div>
+        <div class="menu-button-container"><a href="https://pypi.org/project/easyfermi/" target="_blank"><button class="menu-button" id="downloads-button"><div class="button-title">downloads</div></button></a><h4 class="menu-button-info">Download current or past versions.</h4></div>
+        <div class="menu-button-container"><a href="https://github.com/ranieremenezes/easyfermi" target="_blank"><button class="menu-button" id="community-button"><div class="button-title">open-source</div></button></a><h4 class="menu-button-info">Contribute to the open-source repository.</h4></div>
     </div>
     
     <div id="the-team-display">
         <a id="buymeacoffee-button" href="https://www.buymeacoffee.com/easyfermi" target="_blank"><img src="./images/buymeacoffee-button.png" alt="Buy Me A Coffee" style="width: 12vw;" ></a>
         <h1 style="font-family: monospace; opacity: 0.4; font-size: 5vw; margin: 0 0 0 15vw;">THE TEAM</h1>
-        <div class="team-button-container"><a href="https://github.com/ranieremenezes"><button class="team-button" id="dev1-button"></button></a><div class="dev-name">Raniere de Menezes</div></div>
-        <div class="team-button-container"><a href="https://github.com/clodoN1109"><button class="team-button" id="dev2-button"></button></a><div class="dev-name">Clodomir Vianna</div></div>
-        <div class="team-button-container"><a href="https://github.com/HealthyPear"><button class="team-button" id="dev3-button"></button></a><div class="dev-name">Michele Peresano</div></div>
+        <div class="team-button-container"><a href="https://github.com/ranieremenezes" target="_blank"><button class="team-button" id="dev1-button"></button></a><div class="dev-name">Raniere de Menezes</div></div>
+        <div class="team-button-container"><a href="https://github.com/clodoN1109" target="_blank"><button class="team-button" id="dev2-button"></button></a><div class="dev-name">Clodomir Vianna</div></div>
+        <div class="team-button-container"><a href="https://github.com/HealthyPear" target="_blank"><button class="team-button" id="dev3-button"></button></a><div class="dev-name">Michele Peresano</div></div>
     </div>
     
     <div id="community-display-container">
