@@ -21,3 +21,23 @@ setTimeout(() => {
 
 }, 500);
 
+function changeOSinstructions(instructionId){
+
+    document.getElementById("os-selection-message").style.display="none";
+    document.getElementById("linux-instructions").style.display="none";
+    document.getElementById("windows-instructions").style.display="none";
+    document.getElementById("mac-instructions").style.display="none";
+    document.getElementById(instructionId).style.display="block";
+
+}
+
+function copyToClipboard() {
+    const codeSnippet = document.querySelector('.code-box code');
+    const textArea = document.createElement('textarea');
+    textArea.value = codeSnippet.textContent;
+    document.body.appendChild(textArea);
+    textArea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textArea);
+    alert('Code snippet copied to clipboard!');
+}

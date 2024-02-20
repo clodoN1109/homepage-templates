@@ -18,7 +18,7 @@
             <div id="title" title="easyfermi-title" style="color: rgba(255, 255, 255, 0.861);">easyfermi</div>
             <h6 id="version-number">version 2.0.7</h6>
         </div>
-
+        
         <div id="social-media-links">
             <a class="fa-icon fa-icon-2x " href="https://github.com/ranieremenezes/easyfermi" title="">
                 <i class="fa fa-github social-media-mod"></i>
@@ -40,7 +40,7 @@
         </div>
     </header>
     <div id="presentation">
-
+        
         <div class="container" id="presentation-text">
             <p>The easiest way to analyze Fermi-LAT data.</p>
             <h5 style="padding: 0 40px 0 60px; margin: 0; font-style: normal; font-weight: 300;">&ensp; &ensp; A solution to facilitate Fermi-LAT data analysis by providing an 
@@ -50,15 +50,78 @@
         <div class="container">
             <div class="media-container">
                 <div id="system-menu">
-                    <div class="system-option"><button class="fa fa-linux os-symbol"></button>Linux</div>
-                    <div class="system-option"><button class="fa fa-windows os-symbol"></button>Windows (WSL)</div>
-                    <div class="system-option"><button class="fa fa-apple os-symbol"></button>MacOS</div>
+                    <div onclick="{changeOSinstructions('linux-instructions')}" class="system-option"><button class="fa fa-linux os-symbol"></button>Linux</div>
+                    <div onclick="{changeOSinstructions('windows-instructions')}" class="system-option"><button class="fa fa-windows os-symbol"></button>Windows (WSL)</div>
+                    <div onclick="{changeOSinstructions('mac-instructions')}" class="system-option"><button class="fa fa-apple os-symbol"></button>MacOS</div>
                 </div>
-                <iframe id="youtube-embedded-video" width="560" height="315" src="https://www.youtube.com/embed/OPMOsheCId8?si=Ep9Qo8SFfJ5Zf2TY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <div id="instructions-container">
+                    <div class="scrollable-container">
+                        <div id="os-selection-message" style="display:block;">
+                            Select the OS system to see the installation<br>steps. 
+                        </div>
+                        
+                        
+                        <div id="linux-instructions" style="display: none;">
+                            - Requirements:
+                            <br><br>
+                            <a href="https://github.com/conda-forge/miniforge" target="_blank">Miniforge(recommended)</a>
+                            or <a href="https://www.anaconda.com/download/" target="_blank">Anaconda3</a> 
+                            or <a href="https://docs.anaconda.com/free/miniconda/" target="_blank">Miniconda3</a> 
+                            <br><br>
+                            
+                            - Installation:<br><br>
+                            
+                            &ensp;&ensp; In the terminal, within the anaconda's base <br>virtual environmnet, run:<br>
+                            
+                            <div class="code-box">
+                                <pre><code>mamba create --name easyfermi -c conda-forge -c fermi python=3.9 "fermitools>=2.2.0" "healpy=1.16.1" "gammapy=1.1" "scipy=1.10.1" "astropy=5.3.3" "pyqt=5.15.9" "astroquery=0.4.6" "psutil=5.9.8" "emcee=3.1.4" "corner=2.2.2"</code></pre>
+                                <button class="copy-button" onclick="copyToClipboard()">Copy</button>
+                            </div>
+                            <div class="code-box">
+                                <pre><code>mamba activate easyfermi</code></pre>
+                                <button class="copy-button" onclick="copyToClipboard()">Copy</button>
+                            </div>
+                            <div class="code-box">
+                                <pre><code></code>pip install fermipy easyfermi</pre>
+                                <button class="copy-button" onclick="copyToClipboard()">Copy</button>
+                            </div>
+                            
+                            - Running:<br><br>
+                            
+                            &ensp;&ensp; In the terminal, run:<br>
+                            
+                            <div class="code-box">
+                                <pre><code></code>mamba activate easyfermi</pre>
+                                <button class="copy-button" onclick="copyToClipboard()">Copy</button>
+                            </div>
+                            <div class="code-box">
+                                <pre><code></code>python -c "import easyfermi"</pre>
+                                <button class="copy-button" onclick="copyToClipboard()">Copy</button>
+                            </div>
+                            
+                            <br>Easyfermi GUI might open in a few seconds.
+                            <br><br>Reach out through GitHub for any questions.
+                            <br><br>
+  
+                            
+                        </div>
+                        
+                        
+                        <div id="windows-instructions" style="display: none;">
+                            In the terminal, run: (Windows)
+                        </div>
+                        
+                        
+                        <div id="mac-instructions" style="display: none;">
+                            In the terminal, run: (MacOS)
+                        </div>
+                    </div>
+                </div>
+                <!-- <iframe id="youtube-embedded-video" width="560" height="315" src="https://www.youtube.com/embed/OPMOsheCId8?si=Ep9Qo8SFfJ5Zf2TY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
             </div>
         </div>
     </div>
-
+    
     <div id="menu">
         <!-- <div class="menu-button-container"><a href="https://easyfermi.readthedocs.io/en/latest/"><button class="menu-button" id="about-button"><div class="button-title">the project</div></button></a><h4 class="menu-button-info">Learn about our motivations and goals.</h4></div> -->
         <div class="menu-button-container"><a href="https://easyfermi.readthedocs.io/en/latest/"><button class="menu-button" id="docs-button"><div class="button-title">documentation</div></button></a><h4 class="menu-button-info">Learn how to install and configure it to work. </h4></div>
@@ -68,23 +131,23 @@
     
     <div id="the-team-display">
         <a id="buymeacoffee-button" href="https://www.buymeacoffee.com/easyfermi" target="_blank"><img src="./images/buymeacoffee-button.png" alt="Buy Me A Coffee" style="width: 12vw;" ></a>
-        <h1 style="font-family: monospace; opacity: 0.4; font-size: 5vw;">THE TEAM</h1>
-        <div class="team-button-container"><a href="https://github.com/ranieremenezes"><button class="team-button" id="dev1-button"><div class="dev-name">Raniere</div></button></a></div>
-        <div class="team-button-container"><a href="https://github.com/clodoN1109"><button class="team-button" id="dev2-button"><div class="dev-name">Clodo</div></button></a></div>
-        <div class="team-button-container"><a href="https://github.com/HealthyPear"><button class="team-button" id="dev3-button"><div class="dev-name">Michele</div></button></a></div>
+        <h1 style="font-family: monospace; opacity: 0.4; font-size: 5vw; margin: 0 0 0 15vw;">THE TEAM</h1>
+        <div class="team-button-container"><a href="https://github.com/ranieremenezes"><button class="team-button" id="dev1-button"></button></a><div class="dev-name">Raniere de Menezes</div></div>
+        <div class="team-button-container"><a href="https://github.com/clodoN1109"><button class="team-button" id="dev2-button"></button></a><div class="dev-name">Clodomir Vianna</div></div>
+        <div class="team-button-container"><a href="https://github.com/HealthyPear"><button class="team-button" id="dev3-button"></button></a><div class="dev-name">Michele Peresano</div></div>
     </div>
-
+    
     <div id="community-display-container">
         <h1 class="community-section-title">THE COMMUNITY</h1>
         <div id="the-community-display">
             <iframe title="World map of easyfermi users." aria-label="Interactive line chart" id="datawrapper-chart-t4fiQ" src="https://datawrapper.dwcdn.net/NRZy6/2/?dark=true" scrolling="no" frameborder="0" style="width:100%; padding: 2vw; align-self: center; justify-self: center; color-scheme: dark" height="700px"></iframe>
         </div>
     </div>
-
-
+    
+    
     <!-- <div class="horizontal-bar-display" id="who-is-using-display"></div> -->
-
+    
     
 </body>
-<!-- <script type="text/javascript" src="main.js"></script> -->
+<script type="text/javascript" src="main.js"></script>
 </html>
