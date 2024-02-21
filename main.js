@@ -1,3 +1,4 @@
+if (window.innerWidth > 1000){
 setTimeout(() => {
     // Background gradual zoom effect activation.
     document.getElementById("dynamic-background").style.scale = 2;
@@ -20,6 +21,8 @@ setTimeout(() => {
     const intervalID = setInterval(myCallback, 2*telescope_transition_time);
 
 }, 500);
+
+}
 
 function changeOSinstructions(instructionId, buttonid){
 

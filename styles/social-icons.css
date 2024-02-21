@@ -1,3 +1,4 @@
+
 #social-media-links{
     width: fit-content;
     height: 100%;
@@ -10,6 +11,15 @@
     gap: 2vw;
     
 }
+
+.social-media-mod{
+    font-size: 3vw;
+}
+
+.social-media-mod:hover{
+    scale: 1.1;
+}
+
 .social-round-icon {
     border: 1px solid #838383;
     border-radius: 50px;
@@ -78,10 +88,4 @@
     border-color: #ff0060;
 }
 
-.social-media-mod{
-    font-size: 3vw;
-}
 
-.social-media-mod:hover{
-    scale: 1.1;
-}

@@ -1,0 +1,277 @@
+@media only screen and (max-width:1000px) {
+
+    #presentation{
+        width: 100%;
+        height: 80vh;
+        display: grid;
+        grid-template-columns:auto;
+        grid-template-rows: auto 70%;
+    }
+
+    .container{
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        justify-items: center;
+    
+        padding: 20px 40px 20px 20px;
+    }
+    
+    .media-container{
+    
+        width: 85%;
+        min-width: 85%;
+        height: 100%;
+        padding: 20px 10px 20px 10px;
+        margin: 0;
+    
+        display: grid;
+        grid-template-rows: 85% 15%;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        justify-items: center;
+        gap: 2vh;
+        
+        border-style: solid;
+        border-color: rgba(245, 245, 245, 0.361);
+        border-width: 1px;
+        border-radius: 10px;
+    
+        background-color: rgba(95, 95, 95, 0.103);
+        backdrop-filter: blur(5px);
+    }
+
+    
+    
+    #system-menu{
+    
+        width: 100%;
+        margin: 0 0vw 0 0vw;
+        display: inline-flex;
+        flex-wrap: nowrap;
+        gap: 2vw;
+    
+        color: whitesmoke;
+    }
+    
+    .system-option{
+    
+        border-style: solid;
+        border-color: rgba(245, 245, 245, 0.361);
+        border-width: 2px;
+        border-radius: 5px;
+    
+        cursor: pointer;
+    
+        padding: 4px;
+    }
+    
+    .system-option:hover{
+    
+        scale: 1.05;
+    }
+    
+    .os-symbol{
+    
+        width: 40px;
+        height: 40px;
+    
+        margin: 0;
+        padding: 0;
+    
+        border-style: none;
+        background-color: transparent;
+        color: whitesmoke;
+    
+        cursor: pointer;
+    }
+    
+    #instructions-container{
+    
+        background-color: rgba(46, 42, 42, 0.724);
+    
+        width: 100%;
+        height: 100%;
+    
+        border-style: solid;
+        border-color: rgba(31, 25, 25, 0.797);
+        border-width: 4px;
+        border-radius: 10px;
+    
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        justify-items: center;
+    
+        color: whitesmoke;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    
+    
+    .scrollable-container{
+    
+        display: inline-flex;
+        flex-wrap: nowrap;
+    
+        text-overflow:clip;
+        text-wrap: nowrap;
+    
+        width: 66vw;
+        height: 25vh;
+        padding: 1vw;
+    
+        overflow-y: auto;
+        overflow-x: auto;
+    
+        scroll-behavior: smooth;
+        scroll-snap-type: mandatory;
+        scrollbar-color: rgb(255, 255, 255) rgba(43, 45, 43, 0.756);
+        -webkit-overflow-scrolling: touch;
+    }
+
+
+    #presentation-text{
+
+        position: relative;
+    
+        font-family: monospace;
+        font-style: oblique;
+        font-weight: 900;
+        font-size: 3vw;
+        color: azure;
+    }
+
+    
+#menu-container{
+
+    width: 100%;
+    height: fit-content;
+    padding: 1vw 0 0 0vw;
+    margin: 4vh 0 4vh 0;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+
+    /* background-color: rgba(41, 56, 65, 0.614); */
+    box-shadow: 0.3vw 0.3vw 1vw 0.2vw rgba(255, 77, 148, 0.525);
+    backdrop-filter: blur(5px);
+
+    border-top: 2px solid rgba(255, 222, 222, 0.454);
+
+}
+
+
+#menu {
+    width: 90%;
+    max-width: 100vw;
+    height: fit-content;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: center;
+    justify-content: space-evenly;
+    justify-items: center;
+    gap: 5vw;
+
+    color: azure;
+}
+
+.menu-button-info{
+
+    font-style: normal;
+    font-size: 2.5vw;
+    font-weight: 400;
+
+    width: 22vw;
+    height: fit-content;
+    margin: 0.5vw 0 3vw 0;
+
+    /* text-align: justify; */
+}
+
+.code-box {
+
+    width: 60vw;
+    max-width: 60vw;
+    height: fit-content;
+    position: relative;
+
+    margin: 10px 0 10px 0;
+
+    overflow-x: hidden;
+
+
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-start;
+    justify-items: center;
+
+    background-color: #26232354;
+    padding: 10px 0 10px 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+
+    
+}
+
+.copy-button {
+    position: absolute;
+    right: 5px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+pre{
+    padding: 0;
+    margin: 0;
+}
+
+ #the-team-display {
+    width: 90%;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 5vh;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    justify-items: stretch;
+    color: azure;
+}
+
+#datawrapper-chart-t4fiQ{
+    width:100%;
+    height: 55vw; 
+    padding: 2vw; 
+    align-self: center; 
+    justify-self: center; 
+    color-scheme: dark;
+}
+
+#telescope {
+    position: fixed;
+    top: 4vh;
+    left: 0;
+    width: 25%;
+    transition: transform 10s, width 40s;
+    opacity: 0.95;
+}
+
+}

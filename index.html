@@ -8,6 +8,8 @@
     <link rel="stylesheet" type="text/css" href="style.css"> 
     <link rel="stylesheet" type="text/css" href="./styles/social-icons.css"> 
     <link rel="stylesheet" type="text/css" href="./styles/screen-adaptation.css"> 
+    <link rel="stylesheet" type="text/css" href="./styles/media-maxW1000.css"> 
+    <link rel="stylesheet" type="text/css" href="./styles/media-maxW650.css"> 
     <title>easyfermi</title>
 </head>
 <body>
@@ -15,16 +17,18 @@
     <header>
         <div id="title-container">
             <img id="telescope" src="./images/easyFermiIcon.png">
-            <div id="title" title="easyfermi-title" style="color: rgba(255, 255, 255, 0.861);">easyfermi</div>
-            <h6 id="version-number">version 2.0.7</h6>
+            <div id="flex-column-container">
+                <div id="title" title="easyfermi-title" style="color: rgba(255, 255, 255, 0.861);">easyfermi</div>
+                <div id="version-number">v2.0.7</div>
+            </div>
         </div>
         
         <div id="social-media-links">
             <a class="fa-icon fa-icon-2x " href="https://github.com/ranieremenezes/easyfermi" target="_blank" title="">
-                <i class="fa fa-github social-media-mod"></i>
+                <img class="social-media-mod"  src="./images/github.png" width="100%">
             </a>
             <a class="fa-icon fa-icon-2x " href="https://www.youtube.com/@easyfermi4427" target="_blank" title="">
-                <i class="fa fa-youtube social-media-mod"></i>
+                <img class="social-media-mod"  src="./images/youtube.png" width="80%">
             </a>
             <a class="fa-icon fa-icon-2x " href="https://pypi.org/project/easyfermi/" target="_blank" title="">
                 <i>
@@ -167,29 +171,36 @@
                     <div onclick="{changeOSinstructions('windows-instructions', 'windows-button')}" class="system-option" id="windows-button"><img src="./images/windows-logo.png" title="windows" class="os-symbol"></img></div>
                     <div onclick="{changeOSinstructions('linux-instructions', 'mac-button')}" class="system-option" id="mac-button"><img src="./images/apple-logo.png" title="macOS" class="os-symbol"></img></div>
                 </div>
-                <!-- <iframe id="youtube-embedded-video" width="560" height="315" src="https://www.youtube.com/embed/OPMOsheCId8?si=Ep9Qo8SFfJ5Zf2TY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
             </div>
         </div>
     </div>
     
-    <div id="menu">
-        <div class="menu-button-container"><a href="https://easyfermi.readthedocs.io/en/latest/" target="_blank"><button class="menu-button" id="docs-button"><div class="button-title">documentation</div></button></a><h4 class="menu-button-info">Learn how to install and configure it to work. </h4></div>
-        <div class="menu-button-container"><a href="https://pypi.org/project/easyfermi/" target="_blank"><button class="menu-button" id="downloads-button"><div class="button-title">downloads</div></button></a><h4 class="menu-button-info">Download current or past versions.</h4></div>
-        <div class="menu-button-container"><a href="https://github.com/ranieremenezes/easyfermi" target="_blank"><button class="menu-button" id="community-button"><div class="button-title">open-source</div></button></a><h4 class="menu-button-info">Contribute to the open-source repository.</h4></div>
+    <div id="menu-container">
+        <div id="menu">
+            <div class="menu-button-container"><a href="https://easyfermi.readthedocs.io/en/latest/" target="_blank"><button class="menu-button" id="docs-button"><div class="button-title">documentation</div></button></a><h4 class="menu-button-info">Learn all the details. </h4></div>
+            <div class="menu-button-container"><a href="https://pypi.org/project/easyfermi/" target="_blank"><button class="menu-button" id="downloads-button"><div class="button-title">downloads</div></button></a><h4 class="menu-button-info">Download current or past versions.</h4></div>
+            <div class="menu-button-container"><a href="https://github.com/ranieremenezes/easyfermi" target="_blank"><button class="menu-button" id="community-button"><div class="button-title">open-source</div></button></a><h4 class="menu-button-info">Contribute to the open-source repository.</h4></div>
+        </div>
     </div>
     
-    <div id="the-team-display">
-        <a id="buymeacoffee-button" href="https://www.buymeacoffee.com/easyfermi" target="_blank"><img src="./images/buymeacoffee-button.png" alt="Buy Me A Coffee" style="width: 12vw;" ></a>
-        <h1 style="font-family: monospace; opacity: 0.4; font-size: 5vw; margin: 0 0 0 15vw;">THE TEAM</h1>
-        <div class="team-button-container"><a href="https://github.com/ranieremenezes" target="_blank"><button class="team-button" id="dev1-button"></button></a><div class="dev-name">Raniere de Menezes</div></div>
-        <div class="team-button-container"><a href="https://github.com/clodoN1109" target="_blank"><button class="team-button" id="dev2-button"></button></a><div class="dev-name">Clodomir Vianna</div></div>
-        <div class="team-button-container"><a href="https://github.com/HealthyPear" target="_blank"><button class="team-button" id="dev3-button"></button></a><div class="dev-name">Michele Peresano</div></div>
+    <div id="the-team-display-container">
+        <div id="the-team-display">
+            <a id="buymeacoffee-button" href="https://www.buymeacoffee.com/easyfermi" target="_blank"><img src="./images/buymeacoffee-button.png" alt="Buy Me A Coffee" style="width: 22vh;" ></a>
+            <div class="inline-flex-container">
+                <h1 id="the-team-title">THE TEAM</h1>
+                <div style="display: inline-flex; flex-wrap: nowrap; gap: 4vh;">
+                    <div class="team-button-container"><a href="https://github.com/ranieremenezes" target="_blank"><button class="team-button" id="dev1-button"></button></a><div class="dev-name">Raniere de Menezes</div></div>
+                    <div class="team-button-container"><a href="https://github.com/clodoN1109" target="_blank"><button class="team-button" id="dev2-button"></button></a><div class="dev-name">Clodomir Vianna</div></div>
+                    <div class="team-button-container"><a href="https://github.com/HealthyPear" target="_blank"><button class="team-button" id="dev3-button"></button></a><div class="dev-name">Michele Peresano</div></div>    
+                </div>
+            </div>
+        </div>
     </div>
     
     <div id="community-display-container">
-        <h1 class="community-section-title">THE COMMUNITY</h1>
+        <h1 id="the-community-title">THE COMMUNITY</h1>
         <div id="the-community-display">
-            <iframe title="World map of easyfermi users." aria-label="Interactive line chart" id="datawrapper-chart-t4fiQ" src="https://datawrapper.dwcdn.net/NRZy6/2/?dark=true" scrolling="no" frameborder="0" style="width:100%; padding: 2vw; align-self: center; justify-self: center; color-scheme: dark" height="700px"></iframe>
+            <iframe title="World map of easyfermi users." aria-label="Interactive line chart" id="datawrapper-chart-t4fiQ" src="https://datawrapper.dwcdn.net/NRZy6/2/?dark=true" scrolling="no" frameborder="0" height="700px"></iframe>
         </div>
     </div>
     

@@ -1,0 +1,27 @@
+@media only screen and (max-width:650px) {
+
+    #presentation-text{
+
+        font-weight: 900;
+        font-size: 3.5vw;
+
+    }
+
+    .social-media-mod{
+        scale: 0.7;
+    }
+
+    #social-media-links{
+        width: fit-content;
+        height: 100%;
+    
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    
+        margin-right: 5vw;
+        gap: 0vw;
+        
+    }
+
+}
