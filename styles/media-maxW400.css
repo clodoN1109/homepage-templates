@@ -4,4 +4,14 @@
         display: none;
     }
 
+    #the-community-title{
+
+        font-size: 7vh;
+    
+        justify-self: center;
+        align-self: center;
+        text-align: center;
+        text-justify: center;
+        margin: 0 0 0 0;
+    }
 }
