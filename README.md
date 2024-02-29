@@ -1,8 +1,8 @@
-# Hub Webpage Template
-## A template for building a software project's webpage hub.
+# Software Homepage Template
+## A template for building a software project's homepage.
 
 <br>
-A self-contained, highly compatible and responsive, easily editable, vanilla HTML-CSS-Javascript static webpage. 
+A self-contained, highly compatible and responsive, easily editable, vanilla HTML-CSS-Javascript static homepage. 
 
 Intended to serve as a project's main entry for both users and developers. 
 
