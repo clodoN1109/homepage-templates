@@ -1,4 +1,4 @@
-# Software Homepage Template
+# Homepage Templates
 ## A template for building a software project's homepage.
 
 <br>
