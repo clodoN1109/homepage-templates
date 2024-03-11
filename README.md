@@ -13,5 +13,5 @@ It also is a hub to important links as documentation, support and open-source re
 ### Design Examples
 
 <div align="center">
-  <img src="https://github.com/clodoN1109/easyfermi-webpage/assets/104923248/a7514ed6-0479-44ff-aa92-223690f3207f" width="50%">
+  <img src="https://github.com/clodoN1109/easyfermi-webpage/assets/104923248/a7514ed6-0479-44ff-aa92-223690f3207f" width="90%">
 </div>
