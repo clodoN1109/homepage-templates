@@ -3,11 +3,11 @@
 
 <br>
 A self-contained, highly compatible and responsive, easily editable, vanilla HTML-CSS-Javascript static homepage. 
-
+<br><br>
 Intended to serve as a project's main entry for both users and developers. 
-
+<br><br>
 It presents an effortless path to getting the essencial informations, as the projects's purposes, team cast and installation instructions.
-
+<br><br>
 It also is a hub to important links as documentation, support and open-source repository.
 
 ### Design Examples
